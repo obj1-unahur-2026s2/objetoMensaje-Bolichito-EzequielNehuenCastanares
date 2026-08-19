@@ -139,6 +139,13 @@ object banquitoDeMadera {
 }
 
 object cajitaRoja {
+
+  var cosaAdentro = pelota
+
+  method cosaAdentro(){
+    return cosaAdentro
+  }
+
   method color() {
     return rojo
   }
@@ -151,11 +158,13 @@ object cajitaRoja {
    return self.material().esDeMaterialQueBrilla()
   }
 
-  var peso = 400
+
   method peso() {
-    return peso
+    return 400 + cosaAdentro.peso()
   }
+  
   method guardarAdentro(unaCosa){
+    cosaAdentro = unaCosa
     peso = 400 + unaCosa.peso()
     return peso
   }
